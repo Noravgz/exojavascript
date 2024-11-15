@@ -19,14 +19,21 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
-  const entrepreneursNesEntre1970Et1980 = entrepreneurs.filter(
-    entrepreneur => entrepreneur.year >= 1970 && entrepreneur.year <= 1980
-  );
-  console.log(entrepreneursNesEntre1970Et1980);
 
-  
-  entrepreneurs.forEach(entrepreneur => {
-    console.log(entrepreneur.first);
-    console.log(entrepreneur.last);
-  });
+    // Va m'afficher seulement les entrepreneurs nés entre 1970 et 1980
+        const entrepreneursNesEntre1970Et1980 = entrepreneurs.filter(
+        entrepreneur => entrepreneur.year >= 1970 && entrepreneur.year <= 1980
+      );
+        console.log(entrepreneursNesEntre1970Et1980);
+    
+     // Va m'afficher le prénom et le nom de chaque entrepreneur
+        entrepreneurs.forEach(entrepreneur => {
+        console.log(entrepreneur.first);
+        console.log(entrepreneur.last);
+      });
+
+    // Compare les livres qui restent en fonctio de l'ordre alphabétique
+    // sort() trie les éléments et modifie le tableau
+    entrepreneurs.sort((a, b) => a.last.localeCompare(b.last));
+    console.log(entrepreneurs);
 

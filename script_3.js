@@ -2,9 +2,9 @@ let number = prompt("Salut, bienvenue dans ma chouette pyramide ! Combien d'éta
 
 for (let i = 1; i <= number; i++) {
 
-    let spaces = " ".repeat(number - i); // Le nombre d'espaces diminue à chaque étage
+    let spaces = number - i; // Le nombre d'espaces diminue à chaque étage
 
-    let line = spaces + "#".repeat(i); // Ajouter le bon nombre de # pour l'étage
+    let line = " ".repeat(spaces) + "#".repeat(2 * i - 1); // Ajouter le bon nombre de # pour l'étage
 
     console.log(line);
 }
